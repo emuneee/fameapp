@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shutterBg"
+    android:keepScreenOn="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/shutterControls">
+
+        <co.mainmethod.fame.ui.view.CameraSourcePreview
+            android:id="@+id/preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <co.mainmethod.fame.ui.view.GraphicOverlay
+                android:id="@+id/faceOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </co.mainmethod.fame.ui.view.CameraSourcePreview>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/shutterControls"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/shutter"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shutter" />
+
+        <Button
+            android:id="@+id/load"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/shutter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load" />
+
+        <Button
+            android:id="@+id/flipCamera"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/shutter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flip" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

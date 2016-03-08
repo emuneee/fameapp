@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="base_margin">8dp</dimen>
+    <dimen name="double_margin">16dp</dimen>
+    <dimen name="fab_elevation">4dp</dimen>
+</resources>
